@@ -1,25 +1,20 @@
-import { useState } from 'react'
+import EnvelopeInvite from './components/EnvelopeInvite'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
+    <div className="min-h-screen bg-gradient-to-b from-black to-neutral-900 flex items-center justify-center px-4">
+      <div className="max-w-md w-full">
+        <EnvelopeInvite
+          title="Birthday Celebration"
+          subtitle="Join us for a golden evening"
+          details={[
+            'Saturday, 21 December, 7:00 PM',
+            'The Grand Hall, 123 Celebration Ave',
+            'Dress Code: Black & Gold',
+            'RSVP by Dec 10',
+          ]}
+        />
+        <p className="text-center text-xs text-neutral-400 mt-6">Tap anywhere to replay</p>
       </div>
     </div>
   )
